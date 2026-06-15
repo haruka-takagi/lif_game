@@ -6,8 +6,8 @@ import { VillagerCard } from './VillagerCard'
 export function HUD() {
   return (
     <>
-      {/* Top HUD */}
-      <div className="absolute top-4 left-0 right-0 flex justify-between items-start px-4 pointer-events-none">
+      {/* Top bar — stacks on narrow screens */}
+      <div className="absolute top-2 left-0 right-0 flex flex-wrap justify-between items-start gap-2 px-2 pointer-events-none">
         <div className="pointer-events-auto">
           <ResourcePanel />
         </div>
@@ -16,18 +16,11 @@ export function HUD() {
         </div>
       </div>
 
-      {/* Bottom center: Build menu */}
+      {/* Bottom: build menu */}
       <BuildMenu />
 
       {/* Villager card */}
       <VillagerCard />
-
-      {/* Title */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 pointer-events-none">
-        <h1 className="text-white text-lg font-bold drop-shadow-lg opacity-60 tracking-widest uppercase">
-          Village of Yours
-        </h1>
-      </div>
     </>
   )
 }
